@@ -23,13 +23,16 @@ const HomePage = () => {
                     <GameHeading />
                     <Flex marginBottom={5}>
                         <Box marginRight={5}>
+                            <Show below="md">
+                            </Show>
                             <HStack paddingX={2}>
                                 <PlatformSelector />
                                 <SortSelector />
-                                <Show below="lg">
-                                    <GenreSelector />
-                                </Show>
                             </HStack>
+                            <Box marginLeft={2} marginTop={2}>
+
+                                <GenreSelector />
+                            </Box>
                         </Box>
                     </Flex>
                 </Box>
