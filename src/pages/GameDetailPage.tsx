@@ -15,14 +15,14 @@ const GameDetailPage = () => {
     return (
         <Box bgImg={game.background_image} bgPos='center' bgRepeat="no-repeat" backgroundSize="cover" padding={2}>
             {/* <Image src={game.background_image}></Image> */}
-            <SimpleGrid boxShadow="dark-lg" borderRadius={20} marginTop={150} columns={{ base: 1, md: 2 }} spacing={5}>
-                <GridItem>
+            <SimpleGrid borderRadius={20} boxShadow="dark-lg" marginTop={150} columns={{ base: 1, md: 2 }} spacing={5}>
+                <GridItem borderRadius={20} bgColor='gray.800' opacity="70%" padding={2}>
                     <Heading>{game.name}</Heading>
 
                     <ExpandableText>{game.description_raw}</ExpandableText>
                     <GameAttributes game={game} />
                 </GridItem>
-                <SimpleGrid>
+                <SimpleGrid opacity="100%" padding={2}>
                     <GameTrailer gameId={game.id} />
                     <GameScreenshots gameId={game.id} />
                 </SimpleGrid>
